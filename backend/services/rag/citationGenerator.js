@@ -1,0 +1,1 @@
+export const generateCitations = (chunks) => { return chunks.map(c => c.source); };

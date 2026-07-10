@@ -1,0 +1,1 @@
+export const processDocument = async (file) => { return { text: 'processed' }; };

@@ -1,0 +1,1 @@
+export const processPDF = async (buffer) => { return { text: 'pdf' }; };

@@ -1,0 +1,1 @@
+export const checkCache = (hash) => { return null; };

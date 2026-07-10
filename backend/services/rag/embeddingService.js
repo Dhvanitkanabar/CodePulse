@@ -1,0 +1,1 @@
+export const generateEmbedding = async (text, provider) => { return new Array(1536).fill(0).map(() => Math.random() - 0.5); };

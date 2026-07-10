@@ -1,0 +1,1 @@
+export const processPage = async (html) => { return { text: 'page' }; };

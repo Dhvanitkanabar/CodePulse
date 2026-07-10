@@ -1,0 +1,1 @@
+export const classifyMemory = (text) => { return 'permanent'; };

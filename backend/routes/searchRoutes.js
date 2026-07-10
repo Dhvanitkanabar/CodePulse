@@ -1,0 +1,1 @@
+export const search = async (req, res) => { res.json({ results: [] }); };

@@ -1,0 +1,1 @@
+export const scoreMemory = (memory) => { return 1.0; };

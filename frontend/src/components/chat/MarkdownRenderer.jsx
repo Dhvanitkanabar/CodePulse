@@ -1,0 +1,1 @@
+export default function MarkdownRenderer({content}) { return <div className="markdown">{content}</div>; }

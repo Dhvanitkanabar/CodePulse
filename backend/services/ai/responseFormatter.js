@@ -1,0 +1,1 @@
+export const formatResponse = (raw) => raw.trim();

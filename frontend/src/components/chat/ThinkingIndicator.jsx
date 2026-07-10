@@ -1,0 +1,1 @@
+export default function ThinkingIndicator() { return <div className="thinking">Thinking...</div>; }

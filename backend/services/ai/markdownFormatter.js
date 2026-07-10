@@ -1,0 +1,1 @@
+export const fixBrokenMarkdown = (md) => md.replace(/\\n/g, '\n');

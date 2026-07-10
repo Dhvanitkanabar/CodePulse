@@ -1,0 +1,1 @@
+export default function StreamingMessage() { return <div className="streaming-message">Streaming...</div>; }

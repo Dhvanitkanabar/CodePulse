@@ -1,0 +1,1 @@
+export const manageConversation = (h, n) => [...h, n];

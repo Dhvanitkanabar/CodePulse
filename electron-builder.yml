@@ -1,0 +1,13 @@
+appId: com.neurolens.app
+productName: NeuroLens AI
+directories:
+  output: release/
+files:
+  - "dist/**/*"
+  - "electron/**/*"
+mac:
+  category: public.app-category.productivity
+win:
+  target: nsis
+linux:
+  target: AppImage

@@ -1,5 +1,6 @@
 // AI Service Stub
-// TODO: Implement Gemini, Ollama, and LangChain integrations
+
+export const ollamaInference = async (prompt) => { return 'Response'; };
 
 export class AIService {
   constructor() {

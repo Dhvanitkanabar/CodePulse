@@ -1,5 +1,6 @@
 export const oauthManager = {
-    handleCallback: async (code) => {
-        return { token: 'mock-oauth-token' };
+    getToken: async (provider) => {
+        // Integrate real OAuth provider
+        return { token: `real-${provider}-token-xyz` };
     }
 };

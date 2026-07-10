@@ -1,0 +1,15 @@
+{
+  "info": {
+    "name": "NeuroLens AI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Trigger Orchestrator",
+      "request": {
+        "method": "POST",
+        "url": { "raw": "http://localhost:3000/api/agents/orchestrate" }
+      }
+    }
+  ]
+}

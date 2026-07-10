@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: NeuroLens AI Unified API
+  version: 1.0.0
+paths:
+  /api/agents/orchestrate:
+    post:
+      summary: Triggers the multi-agent orchestrator
+      responses:
+        '200':
+          description: Orchestration initiated
+  /api/memory/query:
+    post:
+      summary: Queries the compressed knowledge graph
+      responses:
+        '200':
+          description: Semantic cluster returned

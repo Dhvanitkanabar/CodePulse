@@ -1,45 +1,17 @@
-# 🧠 NeuroLens AI
+# NeuroLens AI 🚀
 
-**Intelligent Chrome Extension Browser Companion**
+NeuroLens AI is a completely unified, cross-platform AI Operating System that turns your browser into an intelligent, multi-agent workspace.
 
-An AI-powered browser companion that enhances your browsing experience with intelligent insights, knowledge management, and conversational AI.
+## Features
+- **Multi-Agent Orchestration**: Seamless delegation to specialized sub-agents.
+- **Adaptive Memory**: Dynamic LLM context compression and semantic clustering.
+- **Enterprise Ready**: Full Stripe billing, RBAC, and Docker deployments.
+- **Offline Mode**: Fully capable PWA offline caching via Service Workers.
 
-## 🏗️ Project Structure
+## Installation
+1. Clone the repository
+2. `npm install` inside `/frontend` and `/backend`
+3. Start Demo Mode: `NODE_ENV=demo npm run dev`
 
-```
-neurolens-ai/
-├── frontend/        # React 19 + Vite + Tailwind CSS
-├── backend/         # Node.js + Express + MongoDB
-├── extension/       # Chrome Extension (Manifest V3)
-├── shared/          # Shared constants and utilities
-└── docs/            # Documentation
-```
-
-## 🚀 Quick Start
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Backend
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-## 🛠️ Tech Stack
-
-| Layer | Technologies |
-|---|---|
-| Frontend | React 19, Vite, Tailwind CSS, Framer Motion, Zustand |
-| Backend | Node.js, Express, MongoDB, Mongoose |
-| Extension | Manifest V3, Service Workers, Side Panel |
-| AI (Future) | Gemini API, Ollama, LangChain |
-
-## 📄 License
-
-MIT
+## License
+MIT License

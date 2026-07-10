@@ -1,0 +1,1 @@
+export const generateSelectors = (el) => { return ['xpath', 'css']; };

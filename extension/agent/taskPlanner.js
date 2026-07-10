@@ -1,0 +1,1 @@
+export const planTask = (intent) => { return [intent]; };

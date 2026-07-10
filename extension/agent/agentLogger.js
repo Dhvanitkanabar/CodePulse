@@ -1,0 +1,1 @@
+export const logAgent = (msg) => console.log('[Agent]', msg);

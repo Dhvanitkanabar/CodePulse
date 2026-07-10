@@ -1,0 +1,1 @@
+export const executeSafely = (action) => { return true; };

@@ -1,0 +1,1 @@
+export const executeBrowserAction = (action) => { return true; };

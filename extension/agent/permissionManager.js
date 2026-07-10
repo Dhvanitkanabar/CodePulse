@@ -1,0 +1,1 @@
+export const requirePermission = (action) => { return true; };

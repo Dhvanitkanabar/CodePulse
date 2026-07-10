@@ -1,0 +1,1 @@
+export const rankSelectors = (selectors) => { return selectors; };

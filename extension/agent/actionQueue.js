@@ -1,0 +1,1 @@
+export class ActionQueue { constructor() { this.queue = []; } enqueue(a) { this.queue.push(a); } }

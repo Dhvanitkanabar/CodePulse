@@ -1,0 +1,1 @@
+export const detectIntent = (text) => { return { action: 'click', target: text }; };

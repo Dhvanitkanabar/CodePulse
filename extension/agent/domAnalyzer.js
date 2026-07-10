@@ -1,0 +1,1 @@
+export const analyzeDOM = () => { return document.body; };

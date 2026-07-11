@@ -35,11 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   btnSettings.addEventListener('click', () => {
-    if (chrome.runtime.openOptionsPage) {
-      chrome.runtime.openOptionsPage();
-    } else {
-      window.open(chrome.runtime.getURL('options.html'));
-    }
+    window.open('http://localhost:5173');
   });
 
   // Example of using messaging to fetch status or do health check

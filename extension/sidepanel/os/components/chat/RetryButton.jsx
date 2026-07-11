@@ -1,0 +1,1 @@
+export default function RetryButton() { return <button>Retry</button>; }

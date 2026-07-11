@@ -1,0 +1,1 @@
+export default function StopGenerationButton() { return <button>Stop</button>; }

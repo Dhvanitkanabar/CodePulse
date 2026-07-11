@@ -3,36 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeuroLens AI</title>
-  <link rel="stylesheet" href="popup.css">
+  <title>NeuroLens AI Popup</title>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h1>NeuroLens AI</h1>
-      <div id="health-indicator" class="health ok" title="System Health: Online"></div>
-    </header>
-
-    <main>
-      <!-- Current Tab Info -->
-      <section class="card tab-info">
-        <h2 class="card-title">Current Tab</h2>
-        <div id="tab-details" class="truncate">Loading...</div>
-      </section>
-
-      <!-- Status Card -->
-      <section class="card status-card">
-        <h2 class="card-title">System Status</h2>
-        <p id="status-text">Ready</p>
-      </section>
-
-      <!-- Quick Actions -->
-      <section class="quick-actions">
-        <button id="btn-open-sidepanel" class="btn primary">Open Side Panel</button>
-        <button id="btn-settings" class="btn secondary">Settings</button>
-      </section>
-    </main>
-  </div>
-  <script type="module" src="popup.js"></script>
+<body style="margin: 0; padding: 0; background: #0f172a; width: 350px;">
+  <div id="root"></div>
+  <script type="module" src="./index.jsx"></script>
 </body>
 </html>

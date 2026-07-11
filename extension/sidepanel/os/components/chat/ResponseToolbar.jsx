@@ -1,0 +1,1 @@
+export default function ResponseToolbar() { return <div className="toolbar">Toolbar</div>; }

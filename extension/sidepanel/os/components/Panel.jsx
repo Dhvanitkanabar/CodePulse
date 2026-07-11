@@ -249,8 +249,8 @@ export default function Panel({ page, onClose, initialAction }) {
   return (
     <div className="jarvis-panel" role="dialog" aria-label="Jarvis assistant">
 
-      {/* ── Header ── */}
-      <header className="jarvis-panel__header">
+      {/* ── Header (Hidden in OS Mode) ── */}
+      <header className="jarvis-panel__header hidden">
         <VoiceOrb listening={recognition.listening} speaking={tts.speaking} />
         <div className="jarvis-panel__titles">
           <strong className="jarvis-panel__title" title={page.title}>{page.title}</strong>

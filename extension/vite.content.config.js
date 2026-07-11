@@ -6,17 +6,15 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
+    emptyOutDir: false, // Do not delete the main build output!
     rollupOptions: {
       input: {
-        popup: resolve(__dirname, 'popup/popup.html'),
-        sidepanel: resolve(__dirname, 'sidepanel/sidepanel.html'),
-        background: resolve(__dirname, 'background/service-worker.js')
+        content: resolve(__dirname, 'content/index.jsx')
       },
       output: {
         entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
+        format: 'iife', // Immediately Invoked Function Expression
+        inlineDynamicImports: true // Ensure everything is in one file
       }
     }
   }

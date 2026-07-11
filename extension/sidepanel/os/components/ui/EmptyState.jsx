@@ -15,7 +15,7 @@ export default function EmptyState({
         className
       )}
     >
-      <div className="w-16 h-16 rounded-2xl bg-surface-800/50 border border-surface-700/30 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-2xl bg-[#111111] border border-surface-700 flex items-center justify-center mb-4">
         <Icon className="text-surface-500" size={28} />
       </div>
       <h3 className="text-lg font-semibold text-surface-200 mb-1">{title}</h3>

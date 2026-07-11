@@ -6,11 +6,11 @@
 
 @layer base {
   * {
-    @apply border-surface-700/50;
+    @apply border-surface-700;
   }
 
   body {
-    @apply bg-surface-950 text-surface-100 font-sans;
+    @apply bg-surface-950 text-white font-sans antialiased;
   }
 
   ::-webkit-scrollbar {
@@ -18,75 +18,78 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-surface-900;
+    @apply bg-surface-950;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-surface-600 rounded-full hover:bg-surface-500;
+    @apply bg-surface-700 rounded-full hover:bg-surface-600;
   }
 }
 
 @layer components {
+  /* Simple Card background #111111, border #2A2A2A, radius 18px */
   .glass {
-    @apply bg-surface-800/40 backdrop-blur-xl border border-surface-700/30 shadow-glass;
+    @apply bg-surface-900 border border-surface-700 shadow-sm rounded-[18px];
   }
 
   .glass-sm {
-    @apply bg-surface-800/30 backdrop-blur-lg border border-surface-700/20 shadow-glass-sm;
+    @apply bg-surface-900 border border-surface-700 shadow-sm rounded-xl;
   }
 
   .glass-card {
-    @apply glass rounded-2xl p-6;
+    @apply glass p-6;
   }
 
   .glass-sidebar {
-    @apply bg-surface-900/60 backdrop-blur-2xl border-r border-surface-700/20;
+    @apply bg-surface-950 border-r border-surface-700;
   }
 
   .glass-navbar {
-    @apply bg-surface-900/50 backdrop-blur-xl border-b border-surface-700/20;
+    @apply bg-surface-950 border-b border-surface-700;
   }
 
+  /* Input border only, rounded, placeholder gray, no colorful buttons */
   .glass-input {
-    @apply bg-surface-800/50 backdrop-blur-sm border border-surface-700/30 rounded-xl px-4 py-2.5
-      text-surface-100 placeholder:text-surface-500
-      focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500/50
+    @apply bg-transparent border border-surface-700 rounded-xl px-4 py-2.5
+      text-white placeholder:text-surface-500
+      focus:outline-none focus:ring-1 focus:ring-white focus:border-white
       transition-all duration-200;
   }
 
+  /* Primary Button: black bg, white text, radius 12px, padding 12px 20px, hover #1E1E1E */
+  .btn-primary {
+    @apply bg-white text-black font-semibold rounded-xl px-5 py-3
+      hover:bg-[#e5e5e5] transition-all duration-200 cursor-pointer text-sm;
+  }
+
+  /* Secondary Button: transparent, border 1px #2A2A2A, hover #151515 */
+  .btn-secondary {
+    @apply bg-transparent text-white border border-surface-700 rounded-xl px-5 py-3
+      hover:bg-[#151515] transition-all duration-200 cursor-pointer text-sm;
+  }
+
+  /* Glass Button - default secondary/neutral button styling */
   .glass-button {
-    @apply bg-surface-800/50 backdrop-blur-sm border border-surface-700/30 rounded-xl px-4 py-2
-      text-surface-200 hover:bg-surface-700/50 hover:text-white
-      transition-all duration-200 cursor-pointer;
+    @apply bg-transparent text-white border border-surface-700 rounded-xl px-4 py-2
+      hover:bg-[#151515] transition-all duration-200 cursor-pointer text-sm;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-accent-violet to-accent-fuchsia bg-clip-text text-transparent;
+    @apply text-white font-bold;
   }
 
   .gradient-border {
-    @apply relative;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    @apply border border-surface-700 rounded-[18px] bg-surface-900;
   }
 
-  .gradient-border::before {
-    content: '';
-    @apply absolute inset-0 rounded-2xl;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(139, 92, 246, 0.5));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-
+  /* Sidebar Links active: white background, black text. Inactive: transparent. Hover #151515 */
   .sidebar-link {
-    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-surface-400
-      hover:text-white hover:bg-surface-800/50 transition-all duration-200 text-sm font-medium;
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-surface-200
+      hover:text-white hover:bg-[#151515] transition-all duration-200 text-sm font-medium;
   }
 
   .sidebar-link.active {
-    @apply text-white bg-primary-500/20 border border-primary-500/20;
+    @apply bg-white text-black border border-white;
   }
 
   .page-container {
@@ -98,11 +101,11 @@
   }
 
   .page-title {
-    @apply text-2xl lg:text-3xl font-bold text-white;
+    @apply text-2xl lg:text-3xl font-bold text-white tracking-tight;
   }
 
   .page-subtitle {
-    @apply text-surface-400 text-sm lg:text-base;
+    @apply text-surface-500 text-sm lg:text-base;
   }
 }
 

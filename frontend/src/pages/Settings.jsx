@@ -61,13 +61,13 @@ export default function Settings() {
           <h2 className="text-sm font-semibold text-surface-400 uppercase tracking-wider mb-3">
             {group.title}
           </h2>
-          <Card className="divide-y divide-surface-700/20 !p-0 overflow-hidden">
+          <Card className="divide-y divide-surface-700 !p-0 overflow-hidden">
             {group.items.map((setting) => (
               <button
                 key={setting.label}
-                className="w-full flex items-center gap-4 p-4 hover:bg-surface-800/30 transition-colors text-left group"
+                className="w-full flex items-center gap-4 p-4 hover:bg-[#151515] transition-colors text-left group"
               >
-                <div className="p-2.5 rounded-xl bg-surface-800/50 text-surface-400 group-hover:text-primary-400 transition-colors">
+                <div className="p-2.5 rounded-xl bg-[#151515] border border-surface-700 text-surface-400 group-hover:text-white transition-colors">
                   <setting.icon size={18} />
                 </div>
                 <div className="flex-1 min-w-0">

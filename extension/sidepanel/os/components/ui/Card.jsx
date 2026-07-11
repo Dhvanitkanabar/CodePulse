@@ -4,9 +4,8 @@ export default function Card({ className, children, hover = false, glow = false,
   return (
     <div
       className={cn(
-        'glass-card',
-        hover && 'hover:bg-surface-800/60 hover:border-surface-600/40 transition-all duration-300 cursor-pointer',
-        glow && 'hover:shadow-glow',
+        'glass-card bg-[#111111] border border-surface-700 rounded-[18px]',
+        hover && 'hover:bg-[#1e1e1e] hover:border-surface-600 transition-all duration-200 cursor-pointer',
         className
       )}
       {...props}

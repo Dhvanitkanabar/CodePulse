@@ -2,9 +2,9 @@ import { BookOpen, Clock, BarChart3 } from 'lucide-react';
 import Card from '@/components/ui/Card';
 
 const stats = [
-  { label: 'Articles Read', value: '0', icon: BookOpen, color: 'text-primary-400' },
-  { label: 'Reading Time', value: '0h', icon: Clock, color: 'text-accent-emerald' },
-  { label: 'Words Processed', value: '0', icon: BarChart3, color: 'text-accent-amber' },
+  { label: 'Articles Read', value: '0', icon: BookOpen, color: 'text-white' },
+  { label: 'Reading Time', value: '0h', icon: Clock, color: 'text-white' },
+  { label: 'Words Processed', value: '0', icon: BarChart3, color: 'text-white' },
 ];
 
 export default function ReadingDashboard() {
@@ -13,7 +13,7 @@ export default function ReadingDashboard() {
       {stats.map((stat) => (
         <Card key={stat.label} hover>
           <div className="flex items-center gap-3">
-            <div className={`p-2.5 rounded-xl bg-surface-800/50 ${stat.color}`}>
+            <div className={`p-2.5 rounded-xl bg-[#151515] border border-surface-700 ${stat.color}`}>
               <stat.icon size={20} />
             </div>
             <div>

@@ -50,20 +50,20 @@ export const App = () => {
     ];
 
     return (
-        <div className="flex flex-col h-screen w-full bg-[#0a0c1a] text-[#e8efff] overflow-hidden relative font-sans">
-            <React.Suspense fallback={<div className="flex items-center justify-center h-full text-blue-400">Booting NeuroLens OS...</div>}>
+        <div className="flex flex-col h-screen w-full bg-black text-white overflow-hidden relative font-sans">
+            <React.Suspense fallback={<div className="flex items-center justify-center h-full text-white">Booting NeuroLens OS...</div>}>
                 <OnboardingGuide />
                 
                 {/* 1. GLOBAL HEADER */}
-                <header className="shrink-0 h-14 flex items-center justify-between px-4 bg-[#101226]/80 backdrop-blur-md border-b border-white/5 z-50">
+                <header className="shrink-0 h-14 flex items-center justify-between px-4 bg-[#111111] border-b border-surface-700 z-50">
                     <div className="flex items-center gap-3">
-                        <Bot className="w-5 h-5 text-blue-400" />
-                        <span className="font-semibold text-sm tracking-wide bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">NeuroLens AI</span>
+                        <Bot className="w-5 h-5 text-white" />
+                        <span className="font-bold text-sm tracking-wide text-white">NeuroLens AI</span>
                     </div>
                     <div className="flex items-center gap-3">
-                        <div className="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span className="text-[10px] text-emerald-400 font-bold tracking-wider">ONLINE</span>
+                        <div className="px-2.5 py-1 rounded-full bg-[#111111] border border-surface-700 flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
+                            <span className="text-[10px] text-white font-bold tracking-wider">ONLINE</span>
                         </div>
                     </div>
                 </header>
@@ -72,7 +72,7 @@ export const App = () => {
                 <div className="flex flex-1 overflow-hidden relative">
                     
                     {/* COLLAPSIBLE SIDEBAR */}
-                    <div className="w-16 flex flex-col items-center py-4 gap-4 bg-[#0a0c1a]/90 border-r border-white/5 z-40">
+                    <div className="w-16 flex flex-col items-center py-4 gap-4 bg-[#090909] border-r border-surface-700 z-40">
                         {navItems.map(item => {
                             const Icon = item.icon;
                             const isActive = activeTab === item.id;
@@ -81,19 +81,19 @@ export const App = () => {
                                     key={item.id}
                                     onClick={() => setActiveTab(item.id)}
                                     className={`relative p-2.5 rounded-xl transition-all group ${
-                                        isActive ? 'bg-blue-500/20 text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.15)]' : 'text-slate-500 hover:bg-white/5 hover:text-slate-300'
+                                        isActive ? 'bg-white text-black font-semibold' : 'text-slate-500 hover:bg-[#151515] hover:text-white'
                                     }`}
                                     title={item.label}
                                 >
-                                    <Icon className="w-5 h-5" />
-                                    {isActive && <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-5 bg-blue-500 rounded-r-full" />}
+                                    <Icon className={`w-5 h-5 ${isActive ? 'text-black' : 'text-slate-500 group-hover:text-white'}`} />
+                                    {isActive && <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-5 bg-black rounded-r-full" />}
                                 </button>
                             );
                         })}
                     </div>
 
                     {/* MAIN AREA */}
-                    <div className="flex-1 flex flex-col overflow-hidden bg-gradient-to-br from-[#0a0c1a] to-[#05060a]">
+                    <div className="flex-1 flex flex-col overflow-hidden bg-black">
                         <div className="flex-1 overflow-y-auto relative p-4 scrollbar-hide">
                             {activeTab === 'assistant' && <Panel page={{ title: "NeuroLens System", url: "about:blank", paragraphs: [] }} onClose={() => {}} />}
                             {activeTab === 'research' && <ResearchDashboard />}

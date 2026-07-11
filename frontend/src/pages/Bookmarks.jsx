@@ -49,7 +49,7 @@ export default function Bookmarks() {
             onClick={() => setViewMode('grid')}
             className={cn(
               'p-2 transition-colors',
-              viewMode === 'grid' ? 'bg-primary-500/20 text-primary-400' : 'text-surface-500 hover:text-surface-300'
+              viewMode === 'grid' ? 'bg-white text-black' : 'text-surface-500 hover:text-surface-300'
             )}
           >
             <Grid3X3 size={16} />
@@ -58,7 +58,7 @@ export default function Bookmarks() {
             onClick={() => setViewMode('list')}
             className={cn(
               'p-2 transition-colors',
-              viewMode === 'list' ? 'bg-primary-500/20 text-primary-400' : 'text-surface-500 hover:text-surface-300'
+              viewMode === 'list' ? 'bg-white text-black' : 'text-surface-500 hover:text-surface-300'
             )}
           >
             <List size={16} />

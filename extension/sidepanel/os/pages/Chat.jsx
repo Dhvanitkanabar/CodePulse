@@ -11,8 +11,8 @@ export default function Chat() {
       className="flex h-[calc(100vh-4rem)]"
     >
       {/* Conversations Sidebar */}
-      <div className="hidden md:flex flex-col w-72 border-r border-surface-700/20 bg-surface-900/30">
-        <div className="p-4 border-b border-surface-700/20">
+      <div className="hidden md:flex flex-col w-72 border-r border-surface-700 bg-surface-950">
+        <div className="p-4 border-b border-surface-700">
           <Button variant="primary" className="w-full">
             <Plus size={16} /> New Chat
           </Button>

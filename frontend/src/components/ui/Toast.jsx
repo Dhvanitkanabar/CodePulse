@@ -11,10 +11,10 @@ const icons = {
 };
 
 const colors = {
-  success: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400',
-  error: 'border-red-500/30 bg-red-500/10 text-red-400',
-  warning: 'border-amber-500/30 bg-amber-500/10 text-amber-400',
-  info: 'border-primary-500/30 bg-primary-500/10 text-primary-400',
+  success: 'border-surface-700 bg-[#111111] text-white',
+  error: 'border-surface-700 bg-[#111111] text-white',
+  warning: 'border-surface-700 bg-[#111111] text-white',
+  info: 'border-surface-700 bg-[#111111] text-white',
 };
 
 export default function Toast({ message, type = 'info', duration = 4000, onClose }) {

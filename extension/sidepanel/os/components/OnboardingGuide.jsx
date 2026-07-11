@@ -34,12 +34,12 @@ export function OnboardingGuide() {
         {/* Welcome Screen */}
         {step === 0 && (
           <div className="flex flex-col items-center p-8 text-center">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-violet-600/20 text-violet-400 ring-4 ring-violet-500/10">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#151515] text-white ring-4 ring-white/10">
               <Sparkles className="h-8 w-8" />
             </div>
             
             <h2 className="mb-3 text-xl font-bold text-white">
-              👋 Welcome to NeuroLens AI Browser Companion
+              Welcome to NeuroLens AI Browser Companion
             </h2>
             
             <p className="mb-8 text-sm leading-relaxed text-neutral-400">
@@ -49,7 +49,7 @@ export function OnboardingGuide() {
             <div className="flex w-full flex-col gap-3">
               <button
                 onClick={() => setStep(1)}
-                className="w-full rounded-xl bg-violet-600 py-3 text-sm font-bold text-white transition-all hover:bg-violet-500 active:scale-[0.98] shadow-lg shadow-violet-900/20"
+                className="w-full rounded-xl bg-white py-3 text-sm font-bold text-black transition-all hover:bg-[#e5e5e5] active:scale-[0.98]"
               >
                 Start Exploring
               </button>
@@ -73,7 +73,7 @@ export function OnboardingGuide() {
                 <div
                   key={i}
                   className={`h-1.5 w-8 rounded-full transition-colors duration-300 ${
-                    i === step ? "bg-violet-500" : "bg-neutral-800"
+                    i === step ? "bg-white" : "bg-neutral-800"
                   }`}
                 />
               ))}
@@ -83,7 +83,7 @@ export function OnboardingGuide() {
             <div className="mb-8 flex min-h-[160px] flex-col items-center text-center">
               {step === 1 && (
                 <div className="animate-in slide-in-from-right-4 fade-in">
-                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#151515] border border-surface-700 text-white">
                     <FileText className="h-6 w-6" />
                   </div>
                   <h3 className="mb-2 text-lg font-bold text-white">📄 Extract the page</h3>
@@ -95,10 +95,10 @@ export function OnboardingGuide() {
 
               {step === 2 && (
                 <div className="animate-in slide-in-from-right-4 fade-in">
-                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400">
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#151515] border border-surface-700 text-white">
                     <MessageSquare className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-white">💬 Ask Questions</h3>
+                  <h3 className="mb-2 text-lg font-bold text-white">Ask Questions</h3>
                   <p className="mb-3 text-sm text-neutral-400">
                     Ask anything about the page naturally.
                   </p>
@@ -115,10 +115,10 @@ export function OnboardingGuide() {
 
               {step === 3 && (
                 <div className="animate-in slide-in-from-right-4 fade-in">
-                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-rose-500/20 text-rose-400">
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#151515] border border-surface-700 text-white">
                     <Mic className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-white">🎤 Voice Assistant</h3>
+                  <h3 className="mb-2 text-lg font-bold text-white">Voice Assistant</h3>
                   <p className="mb-3 text-sm text-neutral-400">
                     Use the microphone for hands-free control.
                   </p>
@@ -132,10 +132,10 @@ export function OnboardingGuide() {
 
               {step === 4 && (
                 <div className="animate-in slide-in-from-right-4 fade-in">
-                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/20 text-amber-400">
+                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#151515] border border-surface-700 text-white">
                     <Zap className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-white">✨ Productivity</h3>
+                  <h3 className="mb-2 text-lg font-bold text-white">Productivity</h3>
                   <p className="text-sm leading-relaxed text-neutral-400">
                     Read articles faster.<br/>
                     Understand complex documentation.<br/>
@@ -159,15 +159,15 @@ export function OnboardingGuide() {
               {step < 4 ? (
                 <button
                   onClick={() => setStep(step + 1)}
-                  className="flex items-center gap-1 rounded-xl bg-violet-600 px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-violet-500 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-violet-900/20"
+                  className="flex items-center gap-1 rounded-xl bg-white px-6 py-2.5 text-sm font-bold text-black transition-all hover:bg-[#e5e5e5] hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Next
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-4 w-4 text-black" />
                 </button>
               ) : (
                 <button
                   onClick={finishOnboarding}
-                  className="rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-emerald-500 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-emerald-900/20"
+                  className="rounded-xl bg-white px-6 py-2.5 text-sm font-bold text-black border border-white transition-all hover:bg-[#e5e5e5] hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Finish
                 </button>

@@ -13,10 +13,10 @@ import Card from '@/components/ui/Card';
 import { ReadingDashboard } from '@/components';
 
 const quickActions = [
-  { label: 'Start Chat', icon: MessageSquare, color: 'from-primary-500 to-primary-700' },
-  { label: 'Knowledge', icon: Brain, color: 'from-accent-violet to-purple-700' },
-  { label: 'History', icon: Clock, color: 'from-accent-cyan to-cyan-700' },
-  { label: 'Bookmarks', icon: Bookmark, color: 'from-accent-amber to-amber-700' },
+  { label: 'Start Chat', icon: MessageSquare, color: 'bg-transparent border border-surface-700' },
+  { label: 'Knowledge', icon: Brain, color: 'bg-transparent border border-surface-700' },
+  { label: 'History', icon: Clock, color: 'bg-transparent border border-surface-700' },
+  { label: 'Bookmarks', icon: Bookmark, color: 'bg-transparent border border-surface-700' },
 ];
 
 const recentActivity = [
@@ -45,7 +45,7 @@ export default function Dashboard() {
       <motion.div variants={item} className="page-header">
         <div className="flex items-center gap-3 mb-1">
           <h1 className="page-title">Welcome back</h1>
-          <Sparkles className="text-primary-400" size={24} />
+          <Sparkles className="text-white" size={24} />
         </div>
         <p className="page-subtitle">
           Your AI-powered browsing companion is ready to assist you.
@@ -54,18 +54,18 @@ export default function Dashboard() {
 
       {/* Stats Banner */}
       <motion.div variants={item}>
-        <div className="glass-card bg-gradient-to-r from-primary-600/10 via-accent-violet/10 to-accent-fuchsia/10 border-primary-500/10">
+        <div className="glass-card bg-[#111111] border border-surface-700">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-4">
-              <div className="p-3 rounded-2xl bg-primary-500/20">
-                <Zap size={24} className="text-primary-400" />
+              <div className="p-3 rounded-2xl bg-[#151515] border border-surface-700">
+                <Zap size={24} className="text-white" />
               </div>
               <div>
                 <p className="text-white font-semibold">NeuroLens AI is Active</p>
                 <p className="text-sm text-surface-400">Ready to analyze and assist with your browsing</p>
               </div>
             </div>
-            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition-colors">
+            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black text-sm font-semibold hover:bg-[#e5e5e5] transition-colors">
               Get Started <ArrowUpRight size={14} />
             </button>
           </div>
@@ -79,10 +79,10 @@ export default function Dashboard() {
           {quickActions.map((action) => (
             <button
               key={action.label}
-              className="glass-card hover:scale-[1.02] transition-all duration-200 group cursor-pointer text-left"
+              className="glass-card hover:bg-[#151515] transition-all duration-200 group cursor-pointer text-left"
             >
               <div
-                className={`w-10 h-10 rounded-xl bg-gradient-to-br ${action.color} flex items-center justify-center mb-3 group-hover:shadow-glow transition-shadow`}
+                className={`w-10 h-10 rounded-xl ${action.color} flex items-center justify-center mb-3 transition-colors`}
               >
                 <action.icon size={20} className="text-white" />
               </div>
@@ -104,9 +104,9 @@ export default function Dashboard() {
         <Card>
           <div className="space-y-3">
             {recentActivity.map((act, i) => (
-              <div key={i} className="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-800/30 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-primary-500/10 flex items-center justify-center">
-                  <TrendingUp size={14} className="text-primary-400" />
+              <div key={i} className="flex items-center gap-3 p-2 rounded-xl hover:bg-[#151515] transition-colors">
+                <div className="w-8 h-8 rounded-lg bg-[#151515] border border-surface-700 flex items-center justify-center">
+                  <TrendingUp size={14} className="text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm text-surface-200 truncate">{act.title}</p>

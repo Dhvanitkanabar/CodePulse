@@ -13,14 +13,13 @@ export default function NotFound() {
       >
         {/* Glowing 404 */}
         <div className="relative mb-6">
-          <h1 className="text-[120px] sm:text-[160px] font-extrabold gradient-text leading-none select-none">
+          <h1 className="text-[120px] sm:text-[160px] font-extrabold text-white leading-none select-none">
             404
           </h1>
-          <div className="absolute inset-0 blur-3xl opacity-20 bg-gradient-to-r from-primary-500 via-accent-violet to-accent-fuchsia" />
         </div>
 
         <div className="flex items-center justify-center gap-2 mb-3">
-          <Brain className="text-primary-400" size={24} />
+          <Brain className="text-white" size={24} />
           <h2 className="text-xl font-semibold text-white">Page Not Found</h2>
         </div>
 

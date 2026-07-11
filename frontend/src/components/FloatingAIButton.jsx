@@ -25,7 +25,7 @@ export default function FloatingAIButton() {
                 placeholder="Type a question..."
                 className="bg-transparent border-none outline-none text-sm w-full text-surface-200 placeholder:text-surface-500"
               />
-              <Sparkles size={16} className="text-primary-400 shrink-0" />
+              <Sparkles size={16} className="text-white shrink-0" />
             </div>
           </motion.div>
         )}
@@ -36,15 +36,14 @@ export default function FloatingAIButton() {
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsExpanded(!isExpanded)}
         className={cn(
-          'w-14 h-14 rounded-2xl flex items-center justify-center shadow-glow',
-          'bg-gradient-to-br from-primary-500 to-accent-violet',
-          'hover:shadow-glow-lg transition-shadow duration-300'
+          'w-14 h-14 rounded-2xl flex items-center justify-center border border-[#2a2a2a] shadow-sm',
+          'bg-white text-black hover:bg-[#e5e5e5] transition-all duration-200'
         )}
       >
         {isExpanded ? (
-          <X size={22} className="text-white" />
+          <X size={22} className="text-black" />
         ) : (
-          <Sparkles size={22} className="text-white" />
+          <Sparkles size={22} className="text-black" />
         )}
       </motion.button>
     </div>

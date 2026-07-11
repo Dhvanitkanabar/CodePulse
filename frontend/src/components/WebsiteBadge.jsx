@@ -2,10 +2,10 @@ import { Globe, Shield, ShieldCheck, ShieldAlert } from 'lucide-react';
 import { cn } from '@/utils';
 
 const trustColors = {
-  high: { bg: 'bg-emerald-500/10', border: 'border-emerald-500/20', text: 'text-emerald-400', icon: ShieldCheck },
-  medium: { bg: 'bg-amber-500/10', border: 'border-amber-500/20', text: 'text-amber-400', icon: Shield },
-  low: { bg: 'bg-red-500/10', border: 'border-red-500/20', text: 'text-red-400', icon: ShieldAlert },
-  unknown: { bg: 'bg-surface-700/20', border: 'border-surface-700/30', text: 'text-surface-400', icon: Globe },
+  high: { bg: 'bg-[#111111]', border: 'border-surface-700', text: 'text-white', icon: ShieldCheck },
+  medium: { bg: 'bg-[#111111]', border: 'border-surface-700', text: 'text-surface-200', icon: Shield },
+  low: { bg: 'bg-[#111111]', border: 'border-surface-700', text: 'text-surface-400', icon: ShieldAlert },
+  unknown: { bg: 'bg-[#111111]', border: 'border-surface-700', text: 'text-surface-500', icon: Globe },
 };
 
 export default function WebsiteBadge({ url, trust = 'unknown', className }) {

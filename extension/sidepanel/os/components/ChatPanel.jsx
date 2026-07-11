@@ -30,8 +30,8 @@ export default function ChatPanel({ className }) {
               className={cn(
                 'w-8 h-8 rounded-xl flex items-center justify-center shrink-0',
                 msg.role === 'user'
-                  ? 'bg-primary-500/20 text-primary-400'
-                  : 'bg-accent-violet/20 text-accent-violet'
+                  ? 'bg-white text-black'
+                  : 'bg-[#151515] border border-surface-700 text-white'
               )}
             >
               {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
@@ -40,8 +40,8 @@ export default function ChatPanel({ className }) {
               className={cn(
                 'px-4 py-3 rounded-2xl text-sm leading-relaxed',
                 msg.role === 'user'
-                  ? 'bg-primary-600/20 text-surface-100 rounded-tr-md'
-                  : 'glass-sm text-surface-200 rounded-tl-md'
+                  ? 'bg-white text-black rounded-tr-md font-medium'
+                  : 'bg-[#1e1e1e] border border-surface-700 text-white rounded-tl-md'
               )}
             >
               {msg.content}
@@ -51,9 +51,9 @@ export default function ChatPanel({ className }) {
       </div>
 
       {/* Input */}
-      <div className="p-4 border-t border-surface-700/20">
+      <div className="p-4 border-t border-surface-700">
         <div className="glass-input flex items-center gap-2">
-          <button className="p-1.5 rounded-lg hover:bg-surface-700/50 text-surface-500 hover:text-surface-300 transition-colors">
+          <button className="p-1.5 rounded-lg hover:bg-[#151515] text-surface-500 hover:text-surface-300 transition-colors">
             <Paperclip size={18} />
           </button>
           <input
@@ -67,8 +67,8 @@ export default function ChatPanel({ className }) {
             className={cn(
               'p-2 rounded-xl transition-all',
               input.trim()
-                ? 'bg-primary-600 text-white hover:bg-primary-700'
-                : 'text-surface-600'
+                ? 'bg-white text-black hover:bg-[#e5e5e5]'
+                : 'text-surface-600 bg-transparent'
             )}
           >
             <Send size={16} />

@@ -49,7 +49,7 @@ export default function Modal({ isOpen, onClose, title, children, className, siz
           />
           <motion.div
             className={cn(
-              'relative w-full glass rounded-2xl p-6 shadow-glass',
+              'relative w-full glass bg-[#111111] border border-surface-700 rounded-[18px] p-6',
               sizes[size],
               className
             )}
@@ -63,7 +63,7 @@ export default function Modal({ isOpen, onClose, title, children, className, siz
               <h2 className="text-lg font-semibold text-white">{title}</h2>
               <button
                 onClick={onClose}
-                className="p-1.5 rounded-lg text-surface-400 hover:text-white hover:bg-surface-700/50 transition-colors"
+                className="p-1.5 rounded-lg text-surface-400 hover:text-white hover:bg-[#151515] transition-colors"
               >
                 <X size={18} />
               </button>

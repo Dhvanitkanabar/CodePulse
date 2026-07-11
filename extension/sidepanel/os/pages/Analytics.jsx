@@ -3,10 +3,10 @@ import { BarChart3, TrendingUp, Clock, Eye, Brain, Globe } from 'lucide-react';
 import Card from '@/components/ui/Card';
 
 const stats = [
-  { label: 'Pages Analyzed', value: '0', icon: Eye, change: '+0%', color: 'text-primary-400' },
-  { label: 'AI Conversations', value: '0', icon: Brain, change: '+0%', color: 'text-accent-violet' },
-  { label: 'Time Saved', value: '0h', icon: Clock, change: '+0%', color: 'text-accent-emerald' },
-  { label: 'Sites Visited', value: '0', icon: Globe, change: '+0%', color: 'text-accent-amber' },
+  { label: 'Pages Analyzed', value: '0', icon: Eye, change: '+0%', color: 'text-white' },
+  { label: 'AI Conversations', value: '0', icon: Brain, change: '+0%', color: 'text-white' },
+  { label: 'Time Saved', value: '0h', icon: Clock, change: '+0%', color: 'text-white' },
+  { label: 'Sites Visited', value: '0', icon: Globe, change: '+0%', color: 'text-white' },
 ];
 
 const container = {
@@ -41,7 +41,7 @@ export default function Analytics() {
                 <p className="text-xs text-surface-500 mb-1">{stat.label}</p>
                 <p className="text-2xl font-bold text-white">{stat.value}</p>
               </div>
-              <div className={`p-2 rounded-xl bg-surface-800/50 ${stat.color}`}>
+              <div className={`p-2 rounded-xl bg-[#151515] border border-surface-700 ${stat.color}`}>
                 <stat.icon size={18} />
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function Analytics() {
             <Card.Title>Activity Overview</Card.Title>
           </Card.Header>
           <Card.Content>
-            <div className="h-48 flex items-center justify-center border border-dashed border-surface-700/30 rounded-xl">
+            <div className="h-48 flex items-center justify-center border border-dashed border-surface-700 rounded-xl">
               <div className="text-center">
                 <BarChart3 size={32} className="text-surface-600 mx-auto mb-2" />
                 <p className="text-sm text-surface-500">Chart will appear here</p>
@@ -74,7 +74,7 @@ export default function Analytics() {
             <Card.Title>AI Usage Trends</Card.Title>
           </Card.Header>
           <Card.Content>
-            <div className="h-48 flex items-center justify-center border border-dashed border-surface-700/30 rounded-xl">
+            <div className="h-48 flex items-center justify-center border border-dashed border-surface-700 rounded-xl">
               <div className="text-center">
                 <TrendingUp size={32} className="text-surface-600 mx-auto mb-2" />
                 <p className="text-sm text-surface-500">Trends will appear here</p>

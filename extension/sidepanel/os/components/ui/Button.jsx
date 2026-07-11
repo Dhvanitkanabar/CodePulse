@@ -3,15 +3,15 @@ import { cn } from '@/utils';
 
 const variants = {
   primary:
-    'bg-primary-600 hover:bg-primary-700 text-white shadow-glow hover:shadow-glow-lg',
+    'bg-white text-black hover:bg-[#e5e5e5] border border-white font-semibold',
   secondary:
-    'bg-surface-800/50 hover:bg-surface-700/50 text-surface-200 border border-surface-700/30',
+    'bg-transparent hover:bg-[#151515] text-white border border-surface-700',
   ghost:
-    'bg-transparent hover:bg-surface-800/40 text-surface-300 hover:text-white',
+    'bg-transparent hover:bg-[#151515] text-surface-400 hover:text-white',
   danger:
-    'bg-red-600/80 hover:bg-red-600 text-white',
+    'bg-transparent border border-white text-white hover:bg-[#151515]',
   outline:
-    'bg-transparent border border-primary-500/40 text-primary-400 hover:bg-primary-500/10',
+    'bg-transparent border border-surface-700 text-white hover:bg-[#151515]',
 };
 
 const sizes = {

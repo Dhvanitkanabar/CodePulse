@@ -36,9 +36,9 @@ export default function Sidebar() {
         )}
       >
         {/* Logo */}
-        <div className="h-16 flex items-center gap-3 px-4 border-b border-surface-700/20 shrink-0">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-violet flex items-center justify-center shrink-0">
-            <Brain size={20} className="text-white" />
+        <div className="h-16 flex items-center gap-3 px-4 border-b border-surface-700 shrink-0">
+          <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center shrink-0">
+            <Brain size={20} className="text-black" />
           </div>
           {!isCollapsed && (
             <motion.div
@@ -46,7 +46,7 @@ export default function Sidebar() {
               animate={{ opacity: 1, x: 0 }}
               className="overflow-hidden"
             >
-              <h1 className="text-base font-bold gradient-text whitespace-nowrap">NeuroLens AI</h1>
+              <h1 className="text-base font-bold text-white whitespace-nowrap">NeuroLens AI</h1>
               <p className="text-[10px] text-surface-500 -mt-0.5">Browser Companion</p>
             </motion.div>
           )}
@@ -70,7 +70,7 @@ export default function Sidebar() {
         </nav>
 
         {/* Bottom */}
-        <div className="p-3 border-t border-surface-700/20 space-y-1">
+        <div className="p-3 border-t border-surface-700 space-y-1">
           {BOTTOM_NAV.map((item) => (
             <NavLink
               key={item.path}
